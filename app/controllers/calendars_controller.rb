@@ -44,10 +44,9 @@ class CalendarsController < ApplicationController
         wday_num = wday_num -7
       end
 
-      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num]}
+      days = {month: (@todays_date + x).month, date:(@todays_date+x).day, plans: today_plans, wday: wdays[wday_num]}
        # daysハッシュに月、日、今日の予定(today_plans配列)、および曜日(wday)を格納
       @week_days.push(days)  # 今日から1週間分の情報を@week_daysリストに追加
     end
-
   end
 end
